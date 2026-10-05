@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AdvancedNeuralCanvas } from '../components/BackgroundAnimations';
+import { getAssetUrl } from '../utils/asset';
 
 export default function Microgrant() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,17 +9,17 @@ export default function Microgrant() {
 
   const carouselSlides = [
     {
-      image: "/images/oxford_founders_dorm.png",
+      image: getAssetUrl("/images/oxford_founders_dorm.png"),
       label: "O(1) SYNDICATE ALUMNI",
       mentor: "Building autonomous systems from the Oxford CS Dorms."
     },
     {
-      image: "/images/oxford_hackathon_group.png",
+      image: getAssetUrl("/images/oxford_hackathon_group.png"),
       label: "STEALTH BATCH #4",
       mentor: "The next frontier of AI will be built by students, not incumbents."
     },
     {
-      image: "/images/oxford_solo_builder.png",
+      image: getAssetUrl("/images/oxford_solo_builder.png"),
       label: "ELITE TRACE VALIDATION",
       mentor: "Zero interviews. Code execution only."
     }
@@ -95,7 +96,7 @@ export default function Microgrant() {
           </p>
         </div>
         <div style={{ width: '100%', borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-          <img src="/images/ecosystem_team.png" alt="O(1) Syndicate Ecosystem" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+          <img src={getAssetUrl("/images/ecosystem_team.png")} alt="O(1) Syndicate Ecosystem" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
         </div>
       </section>
 
@@ -121,7 +122,7 @@ export default function Microgrant() {
           ].map((mentor, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
               <div style={{ width: '100%', aspectRatio: '1/1', overflow: 'hidden', marginBottom: '1.5rem', backgroundColor: '#e2e2e2', borderRadius: '4px', position: 'relative' }}>
-                <img src={`/images/${mentor.img}`} alt="Classified Mentor" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(20px) grayscale(100%)', transform: 'scale(1.1)' }} />
+                <img src={getAssetUrl(`/images/${mentor.img}`)} alt="Classified Mentor" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(20px) grayscale(100%)', transform: 'scale(1.1)' }} />
                 <div style={{ position: 'absolute', inset: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(10, 25, 47, 0.5)' }}>
                   <span style={{ color: 'var(--color-white)', fontFamily: 'var(--font-mono)', fontSize: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', padding: '0.5rem 1rem', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(5px)' }}>Locked</span>
                 </div>
@@ -162,7 +163,7 @@ export default function Microgrant() {
             <div key={i} style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', aspectRatio: '1/1', border: '1px solid rgba(255,255,255,0.05)', transition: 'transform 0.3s, box-shadow 0.3s', cursor: 'pointer' }}
                  onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 229, 255, 0.15)'; e.currentTarget.querySelector('img').style.transform = 'scale(1.05)'; }}
                  onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}>
-              <img src={`/images/${alumni.img}`} alt={alumni.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', filter: 'grayscale(100%)' }} />
+              <img src={getAssetUrl(`/images/${alumni.img}`)} alt={alumni.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', filter: 'grayscale(100%)' }} />
               
               {/* Overlay Content */}
               <div style={{ position: 'absolute', inset: 0, padding: '1.5rem', background: 'linear-gradient(to top, rgba(10,25,47,1) 0%, rgba(10,25,47,0.4) 50%, transparent 100%)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
@@ -332,14 +333,14 @@ export default function Microgrant() {
             We partner with the world's most elite academic AI societies and labs.
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '6rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            <img src="/images/oxai_logo.svg" alt="OxAI" style={{ height: '50px', filter: 'brightness(0) invert(1) opacity(0.8)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1) opacity(1)'} onMouseOut={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1) opacity(0.8)'} />
+            <img src={getAssetUrl("/images/oxai_logo.svg")} alt="OxAI" style={{ height: '50px', filter: 'brightness(0) invert(1) opacity(0.8)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1) opacity(1)'} onMouseOut={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1) opacity(0.8)'} />
             
             {/* BOLD-Lab Typography Logo */}
             <span style={{ fontFamily: 'var(--font-sans)', fontSize: '2.5rem', fontWeight: 800, color: 'rgba(255,255,255,0.8)', letterSpacing: '-0.05em', transition: 'color 0.3s', cursor: 'default' }} onMouseOver={(e) => e.currentTarget.style.color = 'rgba(255,255,255,1)'} onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'}>
               BOLD<span style={{ fontWeight: 300 }}>LAB</span>
             </span>
 
-            <img src="/images/oxford_ai_ethics.png" alt="Institute for Ethics in AI Oxford" style={{ height: '70px', filter: 'opacity(0.8)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'opacity(1)'} onMouseOut={(e) => e.currentTarget.style.filter = 'opacity(0.8)'} />
+            <img src={getAssetUrl("/images/oxford_ai_ethics.png")} alt="Institute for Ethics in AI Oxford" style={{ height: '70px', filter: 'opacity(0.8)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'opacity(1)'} onMouseOut={(e) => e.currentTarget.style.filter = 'opacity(0.8)'} />
           </div>
         </div>
       </section>

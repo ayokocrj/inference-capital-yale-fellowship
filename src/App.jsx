@@ -132,7 +132,7 @@ function LegalFooter() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Navigation />
       <main>
         <Routes>

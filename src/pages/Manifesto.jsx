@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { AdvancedNeuralCanvas, DenseNeuralNetworkCanvas } from '../components/BackgroundAnimations';
+import { getAssetUrl } from '../utils/asset';
 
 export default function Manifesto() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -175,61 +176,61 @@ export default function Manifesto() {
 
   const teamSlides = [
     {
-      image: "/images/engineer_female.png",
+      image: getAssetUrl("/images/engineer_female.png"),
       name: "Node Alpha",
       role: "Lead AI Architect | MSc in Advanced Computer Science",
       desc: "Architect of the O(1) decision engine. While our VET framework audits the code, our Advanced CS talent evaluates underlying algorithmic complexity."
     },
     {
-      image: "/images/engineer_male.png",
+      image: getAssetUrl("/images/engineer_male.png"),
       name: "Node Beta",
       role: "Quantitative Execution | Oxford Executive MBA (EMBA)",
       desc: "Venture capital requires mature judgment. Our EMBA nodes leverage decades of corporate leadership to align quantitative execution with global liquidity pools."
     },
     {
-      image: "/images/team_white_1.png",
+      image: getAssetUrl("/images/team_white_1.png"),
       name: "Node Gamma",
       role: "Software Architecture | DPhil in AIMS",
       desc: "The human intellect behind our Technical Due Diligence. Doctoral researchers from the AIMS CDT translate complex cryptographic proofs into actionable investment conviction."
     },
     {
-      image: "/images/team_white_5_1783476223747.png",
+      image: getAssetUrl("/images/team_white_5_1783476223747.png"),
       name: "Node Delta",
       role: "Data Infrastructure | MSc in Law and Finance (MLF)",
       desc: "Decentralized AI demands robust legal structuring. Our MLF talent ensures that verifiable data architectures are shielded by compliant cross-border frameworks."
     },
     {
-      image: "/images/team_white_6_1783476231709.png",
+      image: getAssetUrl("/images/team_white_6_1783476231709.png"),
       name: "Node Epsilon",
       role: "Smart Contract Security | BA in PPE",
       desc: "Technology does not scale in a vacuum. Our PPE nodes evaluate the macro-economic viability, regulatory risks, and ethical governance of the protocols we fund."
     },
     {
-      image: "/images/team_white_7_1783476239842.png",
+      image: getAssetUrl("/images/team_white_7_1783476239842.png"),
       name: "Node Zeta",
       role: "API Integration Lead | Oxford MBA",
       desc: "Bridging the gap between Oxford laboratories and global venture hubs. Our MBA network structures the deals and manages API-first revenue strategies."
     },
     {
-      image: "/images/team_white_8_1783476248909.png",
+      image: getAssetUrl("/images/team_white_8_1783476248909.png"),
       name: "Node Eta",
       role: "Algorithmic Risk | DPhil in Computer Science",
       desc: "Pushing the boundaries of our Inference Engine. They design the proprietary VET auditing parameters to evaluate risk in next-generation neural networks."
     },
     {
-      image: "/images/team_white_9_1783476257015.png",
+      image: getAssetUrl("/images/team_white_9_1783476257015.png"),
       name: "Node Theta",
       role: "Cryptographic Proofs | MSc in Financial Economics (MFE)",
       desc: "Financial modeling meets deeptech. Our MFE talent analyzes O(1) scalability metrics to project the long-term unit economics of cryptographic networks."
     },
     {
-      image: "/images/team_white_10_1783476266175.png",
+      image: getAssetUrl("/images/team_white_10_1783476266175.png"),
       name: "Node Iota",
       role: "Compute Optimization | MSc in AI for Business",
       desc: "Translating pure compute capability into commercial dominance. They evaluate how autonomous agents integrate into enterprise workflows to disrupt legacy software."
     },
     {
-      image: "/images/team_white_11_1783476273688.png",
+      image: getAssetUrl("/images/team_white_11_1783476273688.png"),
       name: "Node Kappa",
       role: "Protocol Engineering | BA in Computer Science",
       desc: "The human pulse on campus. Our undergraduate CS nodes source unpolished protocol engineers from internal Oxford hackathons before founders raise capital."
@@ -278,7 +279,7 @@ export default function Manifesto() {
           <div className="grid-1-2-col" style={{ alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
               <div style={{ width: '100%', aspectRatio: '1', backgroundColor: 'var(--color-slate)', border: '1px solid rgba(255, 255, 255, 0.1)', overflow: 'hidden' }}>
-                <img src="/images/caryl.png" alt="Caryl OBAM, Managing Partner" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) contrast(1.1)' }} />
+                <img src={getAssetUrl("/images/caryl.png")} alt="Caryl OBAM, Managing Partner" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) contrast(1.1)' }} />
               </div>
               <div style={{ position: 'absolute', bottom: '-1rem', right: '-1rem', backgroundColor: 'var(--color-white)', color: 'var(--color-text-dark)', padding: '0.5rem 1rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', letterSpacing: '0.1em' }}>
                 GP / MP
